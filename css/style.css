@@ -101,23 +101,34 @@ color: #FFF;
 	z-index: 9999;
 }
 #pre-status, .preload-placeholder {
-	background-image:url(../preloader.gif);
+	background-image: url(../preloader.gif);
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 296px;
-	left: 38%;
-	margin: -20px 0 0 -20px;
+	left: 50%;
+	transform: translateX(-50%);
 	position: absolute;
 	top: 32%;
 	width: 296px;
 }
 .preload-placeholder {
 	background: none;
-	left: 0;
 	margin: 0;
 	text-align: center;
 	top: 65%;
 }
+
+@media (max-width: 768px) {
+	#pre-status, .preload-placeholder {
+		height: 150px;
+		width: 150px;
+		top: 40%;
+	}
+	.preload-placeholder {
+		top: 70%;
+	}
+}
+
 .parallex {
 	background-attachment:fixed;
 	background-position:center;
@@ -863,40 +874,78 @@ ul.nav li.active a:before {
 .team-desc ul.team-social-icon li a i.fa:hover.fa-google-plus {
 	color:#dc4e41;
 }
-/*Testimonials-stylesheets-include-here*/
 #testimonials {
-	background-image:url(../images/Testimonials/01.jpg);
-	height:450px;
-	text-align:center;
+    background-image: url(../images/Testimonials/01.jpg);
+    height: 450px;
+    text-align: center;
+    padding: 20px 0;
 }
-#testimonials .owl-theme .owl-controls .owl-page span{
-background:#e73131;
+
+#testimonials .owl-theme .owl-controls .owl-page span {
+    background: #e73131;
 }
+
 .quote {
-	position:relative;
-	top:40px;
+    position: relative;
+    top: 20px;
 }
+
 .quote i.fa {
-	font-size:35px;
-	color:#FFFFFF;
+    font-size: 35px;
+    color: #FFFFFF;
 }
+
 #owl-testi {
-	position:relative;
-	top:65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+#owl-testi .item {
+    margin-bottom: 20px;
+}
+
+#owl-testi img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+}
+
 #owl-testi p {
-	color:#FFFFFF;
-	font-weight:normal;
+    color: #FFFFFF;
+    font-weight: normal;
 }
+
 #owl-testi h5 {
-	color:#FFFFFF;
-	line-height:30px;
-	padding-top:20px;
+    color: #FFFFFF;
+    line-height: 30px;
+    padding-top: 10px;
 }
+
 #owl-testi h6 {
-	color:#FFFFFF;
-	padding-top:20px;
+    color: #FFFFFF;
+    padding-top: 10px;
 }
+
+@media (max-width: 768px) {
+    #testimonials {
+        height: 400px;
+        padding: 40px 0;
+    }
+
+    #owl-testi h5 {
+        font-size: 18px;
+    }
+
+    #owl-testi h6 {
+        font-size: 16px;
+    }
+
+    .quote i.fa {
+        font-size: 25px;
+    }
+}
+
 /*Fun-Facts-stylesheets-include-here*/
 #fun-facts {
 	background-color: #f8f8f8;
